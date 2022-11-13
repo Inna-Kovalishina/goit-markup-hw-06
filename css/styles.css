@@ -546,7 +546,12 @@ body {
     display: block;
 }
 
-.contacts-item:not(:last-child) {
+/* .contacts-item:not(:last-child) {
+    margin-right: 70px;
+} */
+
+.contacts-item.address {
+    width: 231px;
     margin-right: 70px;
 }
 
@@ -585,10 +590,11 @@ body {
 }
 
 /* Стилізація блоку соціальних мереж */
-.networcs {
+.contacts-item.networks {
     display: block;
     padding-top: 72px;
     padding-bottom: 100px;
+    margin-right: 93px;
 }
 
 .networks-text {
@@ -621,6 +627,93 @@ body {
 .social-link-footer:hover,
 .social-link-footer:focus {
     background-color: var(--accent-color);
+}
+
+/* Стилізація блоку підписки */
+
+.contacts-item.subscription {
+    padding-top: 72px;
+    padding-bottom: 94px;
+}
+
+.subscription-form {
+    display: block;
+    width: 570px;
+}
+
+.subscription-label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--primary-background-color);
+}
+
+.subscription-wrapper {
+    display: flex;
+    padding-top: 20px;
+}
+
+.subscription-input {
+    width: 358px;
+    height: 50px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 15px 16px;
+    margin-right: 12px;
+}
+
+.subscription-input::placeholder {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 13px 28px;
+    
+    width: 200px;
+    height: 50px;
+    background-color: var(--accent-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: var(--primary-background-color);
+
+    cursor: pointer;
+}
+
+.subscription-button:hover,
+.subscription-button:focus {
+    background-color: #188CE8;
+}
+
+
+.subscription-wrap {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
 }
 
 
@@ -823,6 +916,10 @@ body {
 
 .input-checkbox:focus + .checkbox-wrap {
     border-color: var(--accent-color);
+}
+
+.input-checkbox:checked:focus+.checkbox-wrap {
+    border-color: var(--secondary-background-color);
 }
 
 .input-checkbox:checked + .checkbox-wrap .checkbox-icon {
